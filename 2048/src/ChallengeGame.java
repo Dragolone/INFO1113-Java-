@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class ChallengeGame {
     public static void main(String[] args) {
-        int size = 4; // 默认大小为 4x4
+        int size = 4; // Default size is 4x4
         if (args.length > 1) {
             System.out.println("Invalid number of arguments. Please provide one argument for size or none for default settings.");
             return;
@@ -54,12 +54,12 @@ public class ChallengeGame {
             }
 
             if (moved) {
-                game.spawnRandom(); // 移动成功后生成新瓦片
+                game.spawnRandom(); // Generate new tiles after successful movement
             } else {
                 System.out.println("Invalid move. No tiles can move that direction. Try again.");
             }
 
-            // 检查是否达到 2048
+            // Check if 2048 has been reached
             if (hasTileValue(game.getBoard(), 2048)) {
                 System.out.println("Congrats, now you can keep playing for a higher score.");
             }
